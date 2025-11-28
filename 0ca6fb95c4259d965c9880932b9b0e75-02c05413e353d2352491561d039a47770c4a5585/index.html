@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BeliNow-ID — Portofolio</title>
+  <meta name="description" content="Portofolio BeliNow-ID — solusi e-commerce / desain modern minimalis. Kontak untuk kerjasama." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <!-- Tailwind Play CDN: cepat untuk prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Modal animation */
+    .modal-bg { background: rgba(0,0,0,0.6); }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50">
+  <!-- Container -->
+  <div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white/60 backdrop-blur sticky top-0 z-50 border-b">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-md bg-gradient-to-br from-indigo-600 to-purple-500 flex items-center justify-center text-white font-semibold">BN</div>
+          <div>
+            <a id="brand" class="text-lg font-semibold">BeliNow-ID</a>
+            <div class="text-xs text-gray-500" id="tagline">Portofolio</div>
+          </div>
+        </div>
+
+        <nav class="flex items-center gap-4">
+          <a href="#work" class="text-sm hover:text-indigo-600">Work</a>
+          <a href="#about" class="text-sm hover:text-indigo-600">About</a>
+          <a href="#contact" class="text-sm hover:text-indigo-600">Contact</a>
+
+          <!-- Language toggle -->
+          <div class="ml-4 flex items-center gap-2 border rounded-md px-2 py-1">
+            <button id="lang-id" class="text-xs px-2 py-1 rounded hover:bg-gray-100 bg-indigo-50 text-indigo-600">ID</button>
+            <button id="lang-en" class="text-xs px-2 py-1 rounded hover:bg-gray-100">EN</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main class="flex-1">
+      <section class="max-w-6xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 id="hero-title" class="text-4xl sm:text-5xl font-extrabold leading-tight">
+            Solusi Desain & Pengembangan Web Modern
+          </h1>
+          <p id="hero-sub" class="mt-6 text-lg text-gray-600">
+            Membuat website yang elegan, cepat, dan mudah dikelola — untuk brand dan usaha Anda.
+          </p>
+
+          <div class="mt-8 flex gap-3">
+            <a href="#contact" class="inline-block px-5 py-3 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700">Hire me</a>
+            <a href="#work" class="inline-block px-5 py-3 border rounded-md hover:bg-gray-100">Lihat portofolio</a>
+          </div>
+
+          <!-- Skills -->
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-gray-600">
+            <div class="p-3 bg-white rounded-lg shadow-sm text-center">HTML</div>
+            <div class="p-3 bg-white rounded-lg shadow-sm text-center">Tailwind</div>
+            <div class="p-3 bg-white rounded-lg shadow-sm text-center">Responsive</div>
+            <div class="p-3 bg-white rounded-lg shadow-sm text-center">UI/UX</div>
+          </div>
+        </div>
+
+        <!-- Mock device / image -->
+        <div class="flex justify-center">
+          <div class="w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a9f2e8e1e0f31a6b9d7a3b6f3a9f2d2" alt="Mockup" class="w-full h-72 object-cover">
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="max-w-6xl mx-auto px-6 py-12">
+        <div class="bg-white rounded-2xl p-8 shadow">
+          <h2 class="text-2xl font-semibold" id="about-title">Tentang</h2>
+          <p class="mt-4 text-gray-600" id="about-desc">
+            Saya membuat website yang fokus pada performa, aksesibilitas, dan desain minimalis. Bekerja pada proyek e-commerce, brand landing page, dan aplikasi web kecil.
+          </p>
+        </div>
+      </section>
+
+      <!-- Work / Gallery -->
+      <section id="work" class="max-w-6xl mx-auto px-6 py-12">
+        <h3 class="text-xl font-semibold mb-6" id="work-title">Portofolio</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Gallery items: ganti src sesuai asetmu -->
+          <button class="gallery-item group relative overflow-hidden rounded-lg shadow" data-src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="Project 1" class="w-full h-48 object-cover transition-transform group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 flex items-end p-4">
+              <div class="text-white text-sm">E-commerce UI</div>
+            </div>
+          </button>
+
+          <button class="gallery-item group relative overflow-hidden rounded-lg shadow" data-src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Project 2" class="w-full h-48 object-cover transition-transform group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 flex items-end p-4">
+              <div class="text-white text-sm">Brand Landing</div>
+            </div>
+          </button>
+
+          <button class="gallery-item group relative overflow-hidden rounded-lg shadow" data-src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop">
+            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=800&auto=format&fit=crop" alt="Project 3" class="w-full h-48 object-cover transition-transform group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 flex items-end p-4">
+              <div class="text-white text-sm">Dashboard</div>
+            </div>
+          </button>
+
+          <!-- Tambah item sesuai kebutuhan -->
+        </div>
+      </section>
+
+      <!-- Lightbox modal -->
+      <div id="lightbox" class="fixed inset-0 hidden items-center justify-center z-50 modal-bg">
+        <button id="lb-close" class="absolute top-6 right-6 text-white text-2xl">×</button>
+        <img id="lb-img" src="" alt="Preview" class="max-w-[90%] max-h-[80%] rounded-lg shadow-xl">
+      </div>
+
+      <!-- Contact -->
+      <section id="contact" class="max-w-3xl mx-auto px-6 py-12">
+        <div class="bg-white rounded-2xl p-8 shadow">
+          <h3 class="text-2xl font-semibold" id="contact-title">Kontak</h3>
+          <p class="mt-2 text-gray-600" id="contact-desc">Ingin bekerja sama? Isi form di bawah atau kirim email langsung.</p>
+
+          <!-- FORM: ganti action ke FormSubmit atau endpoint lain -->
+          <form id="contact-form" class="mt-6 grid gap-4" action="https://formsubmit.co/your-email@domain.com" method="POST">
+            <!-- Untuk FormSubmit: tambahkan hidden inputs sesuai dokumentasi jika perlu -->
+            <input type="hidden" name="_subject" value="New message from BeliNow-ID website">
+            <input type="hidden" name="_captcha" value="false">
+            <input name="name" required class="border rounded-md px-4 py-2" placeholder="Nama / Name">
+            <input name="email" type="email" required class="border rounded-md px-4 py-2" placeholder="Email">
+            <textarea name="message" rows="5" required class="border rounded-md px-4 py-2" placeholder="Pesan / Message"></textarea>
+
+            <div class="flex items-center gap-3">
+              <button type="submit" class="px-5 py-3 bg-indigo-600 text-white rounded-md">Kirim / Send</button>
+              <a href="mailto:your-email@domain.com" class="text-sm text-gray-600 hover:underline">Atau email langsung</a>
+            </div>
+          </form>
+
+          <p class="mt-6 text-xs text-gray-400">Catatan: ganti alamat email pada form action dengan emailmu untuk menerima pesan.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+      <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center text-sm text-gray-600">
+        <div>© <span id="brand-foot">BeliNow-ID</span> <span id="year"></span></div>
+        <div class="flex items-center gap-3">
+          <a href="#" aria-label="twitter" class="hover:text-indigo-600">Twitter</a>
+          <a href="#" aria-label="linkedin" class="hover:text-indigo-600">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts: language switch, lightbox -->
+  <script>
+    // Simple translations dictionary
+    const translations = {
+      id: {
+        heroTitle: "Solusi Desain & Pengembangan Web Modern",
+        heroSub: "Membuat website yang elegan, cepat, dan mudah dikelola — untuk brand dan usaha Anda.",
+        tagline: "Portofolio",
+        heroCTA: "Hire me",
+        heroCTA2: "Lihat portofolio",
+        aboutTitle: "Tentang",
+        aboutDesc: "Saya membuat website yang fokus pada performa, aksesibilitas, dan desain minimalis. Bekerja pada proyek e-commerce, brand landing page, dan aplikasi web kecil.",
+        workTitle: "Portofolio",
+        contactTitle: "Kontak",
+        contactDesc: "Ingin bekerja sama? Isi form di bawah atau kirim email langsung.",
+      },
+      en: {
+        heroTitle: "Modern Web Design & Development",
+        heroSub: "I build elegant, fast, and easy-to-manage websites — for brands and small businesses.",
+        tagline: "Portfolio",
+        heroCTA: "Hire me",
+        heroCTA2: "View portfolio",
+        aboutTitle: "About",
+        aboutDesc: "I build websites focused on performance, accessibility, and minimal design. Experienced with e-commerce, landing pages, and small web apps.",
+        workTitle: "Portfolio",
+        contactTitle: "Contact",
+        contactDesc: "Want to work together? Fill the form below or send an email directly.",
+      }
+    };
+
+    // DOM refs
+    const el = id => document.getElementById(id);
+    const setLang = (lng) => {
+      const t = translations[lng] || translations.id;
+      el('hero-title').textContent = t.heroTitle;
+      el('hero-sub').textContent = t.heroSub;
+      el('tagline').textContent = t.tagline;
+      el('about-title').textContent = t.aboutTitle;
+      el('about-desc').textContent = t.aboutDesc;
+      el('work-title').textContent = t.workTitle;
+      el('contact-title').textContent = t.contactTitle;
+      el('contact-desc').textContent = t.contactDesc;
+      // buttons (some static)
+      // set active button styles
+      document.getElementById('lang-id').classList.toggle('bg-indigo-50 text-indigo-600', lng === 'id');
+      document.getElementById('lang-en').classList.toggle('bg-indigo-50 text-indigo-600', lng === 'en');
+      // store preference
+      try { localStorage.setItem('lang', lng); } catch(e){}
+    };
+
+    // init language from storage or browser
+    const preferred = (localStorage.getItem('lang') || (navigator.language && navigator.language.startsWith('en') ? 'en' : 'id'));
+    setLang(preferred);
+
+    document.getElementById('lang-id').addEventListener('click', ()=> setLang('id'));
+    document.getElementById('lang-en').addEventListener('click', ()=> setLang('en'));
+
+    // Lightbox
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = el('lightbox'), lbImg = el('lb-img'), lbClose = el('lb-close');
+    galleryItems.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const src = btn.dataset.src;
+        if(!src) return;
+        lbImg.src = src;
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    const closeLB = ()=> {
+      lightbox.classList.add('hidden');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    };
+    lbClose.addEventListener('click', closeLB);
+    lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLB(); });
+
+    // Year in footer
+    el('year').textContent = new Date().getFullYear();
+
+    // Progressive enhancement: if JS disabled, language remains default in HTML (id)
+  </script>
+</body>
+</html>
